@@ -39,10 +39,8 @@ class Window:
 			glRotatef(30,1, 0, 0) 
 			glRotatef(self.orientation,0, 1, 0)
 			glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-			glBegin(GL_LINES)
-			glColor3f (1.0, 1.0, 0.0)
+			#Dibujar Ejes
 			self._draw_axes()
-			glEnd()
 			if(self.rotate):
 				glRotatef(30,1, 1, 1)
 			glBegin(GL_LINES)
@@ -73,12 +71,15 @@ class Window:
 		glVertex3fv(vertices[b])
 	
 	def _draw_axes(self):
+		glBegin(GL_LINES)
+		glColor3f (1.0, 1.0, 0.0)
 		glVertex3fv([0,0,0])
 		glVertex3fv([3,0,0])
 		glVertex3fv([0,0,0])
 		glVertex3fv([0,3,0])
 		glVertex3fv([0,0,0])
 		glVertex3fv([0,0,3])
+		glEnd()
 
 	def _keyPressed(self,*args):
 		if(args[1]==262):
