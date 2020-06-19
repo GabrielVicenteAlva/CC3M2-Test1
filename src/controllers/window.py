@@ -35,12 +35,14 @@ class Window:
 		while not glfw.window_should_close(self._win):
 			glfw.poll_events()
 			glLoadIdentity()
+			# Camara
 			glScalef(.5,.5,.5)
 			glRotatef(30,1, 0, 0) 
 			glRotatef(self.orientation,0, 1, 0)
 			glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-			#Dibujar Ejes
+			# Dibujar Ejes
 			self._draw_axes()
+			# Girar cubo
 			if(self.rotate):
 				glRotatef(30,1, 1, 1)
 			glBegin(GL_LINES)
