@@ -1,7 +1,7 @@
 autopep8 == 1.5.3
 glfw == 1.11.2
 multipledispatch == 0.6.0
-numpy == 1.18.5
+numpy == 1.22.0
 Pillow == 7.1.2
 pip == 21.1
 pycodestyle == 2.6.0
